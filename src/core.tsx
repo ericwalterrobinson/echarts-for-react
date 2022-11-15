@@ -183,11 +183,18 @@ export default class EChartsReactCore extends PureComponent<EChartsReactProps> {
    * render the echarts
    */
   private updateEChartsOption(): EChartsInstance {
-    const { option, notMerge = false, lazyUpdate = false, showLoading, loadingOption = null } = this.props;
+    const {
+      option,
+      notMerge = false,
+      lazyUpdate = false,
+      showLoading,
+      loadingOption = null,
+      replaceMerge = [],
+    } = this.props;
     // 1. get or initial the echarts object
     const echartInstance = this.getEchartsInstance();
     // 2. set the echarts option
-    echartInstance.setOption(option, notMerge, lazyUpdate);
+    echartInstance.setOption(option, { notMerge: notMerge, lazyUpdate: lazyUpdate, replaceMerge: replaceMerge });
     // 3. set loading mask
     if (showLoading) echartInstance.showLoading(loadingOption);
     else echartInstance.hideLoading();
