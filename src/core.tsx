@@ -110,7 +110,6 @@ export default class EChartsReactCore extends PureComponent<EChartsReactProps> {
       });
     });
   }
-
   /**
    * return the existing echart object
    */
