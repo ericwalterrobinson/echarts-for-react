@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "lib": ["esnext", "dom"],
-    "types": ["jest", "react", "node"]
+    "types": ["react", "node"]
   },
   "include": ["src"]
 }
