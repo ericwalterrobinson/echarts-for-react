@@ -86,7 +86,6 @@ var EChartsReactCore = /** @class */ (function (_super) {
      * return the existing echart object
      */
     EChartsReactCore.prototype.getEchartsInstance = function () {
-        console.log('lkdfjghlksdjfhglksdjfhglksdjfhgsldf');
         return this.echarts.getInstanceByDom(this.ele);
     };
     /**
@@ -163,6 +162,7 @@ var EChartsReactCore = /** @class */ (function (_super) {
         // 1. get or initial the echarts object
         var echartInstance = this.getEchartsInstance();
         // 2. set the echarts option
+        console.log(option);
         console.log(replaceMerge);
         echartInstance.setOption(option, { notMerge: notMerge, lazyUpdate: lazyUpdate, replaceMerge: replaceMerge });
         // 3. set loading mask

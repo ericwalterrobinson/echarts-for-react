@@ -115,7 +115,6 @@ export default class EChartsReactCore extends PureComponent<EChartsReactProps> {
    * return the existing echart object
    */
   public getEchartsInstance(): ECharts {
-    console.log('lkdfjghlksdjfhglksdjfhglksdjfhgsldf');
     return this.echarts.getInstanceByDom(this.ele);
   }
 
@@ -195,6 +194,7 @@ export default class EChartsReactCore extends PureComponent<EChartsReactProps> {
     // 1. get or initial the echarts object
     const echartInstance = this.getEchartsInstance();
     // 2. set the echarts option
+    console.log(option);
     console.log(replaceMerge);
     echartInstance.setOption(option, { notMerge: notMerge, lazyUpdate: lazyUpdate, replaceMerge: replaceMerge });
     // 3. set loading mask
