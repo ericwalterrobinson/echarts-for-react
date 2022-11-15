@@ -71,7 +71,7 @@ temp
 .cache
 demos/assets/screenshots
 #/lib
-/esm
+#/esm
 #/dist
 
 *.sw*
