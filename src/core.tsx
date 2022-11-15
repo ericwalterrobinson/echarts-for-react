@@ -65,7 +65,7 @@ export default class EChartsReactCore extends PureComponent<EChartsReactProps> {
     }
 
     // when these props are not isEqual, update echarts
-    const pickKeys = ['option', 'notMerge', 'lazyUpdate', 'showLoading', 'loadingOption'];
+    const pickKeys = ['option', 'notMerge', 'lazyUpdate', 'showLoading', 'loadingOption', 'replaceMerge'];
     if (!isEqual(pick(this.props, pickKeys), pick(prevProps, pickKeys))) {
       this.updateEChartsOption();
     }
@@ -115,6 +115,7 @@ export default class EChartsReactCore extends PureComponent<EChartsReactProps> {
    * return the existing echart object
    */
   public getEchartsInstance(): ECharts {
+    console.log('lkdfjghlksdjfhglksdjfhglksdjfhgsldf');
     return this.echarts.getInstanceByDom(this.ele);
   }
 

@@ -42,7 +42,7 @@ var EChartsReactCore = /** @class */ (function (_super) {
             return;
         }
         // when these props are not isEqual, update echarts
-        var pickKeys = ['option', 'notMerge', 'lazyUpdate', 'showLoading', 'loadingOption'];
+        var pickKeys = ['option', 'notMerge', 'lazyUpdate', 'showLoading', 'loadingOption', 'replaceMerge'];
         if (!isEqual(pick(this.props, pickKeys), pick(prevProps, pickKeys))) {
             this.updateEChartsOption();
         }
@@ -86,6 +86,7 @@ var EChartsReactCore = /** @class */ (function (_super) {
      * return the existing echart object
      */
     EChartsReactCore.prototype.getEchartsInstance = function () {
+        console.log('lkdfjghlksdjfhglksdjfhglksdjfhgsldf');
         return this.echarts.getInstanceByDom(this.ele);
     };
     /**
