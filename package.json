@@ -18,7 +18,7 @@
     "lint": "eslint src __tests__ && prettier src __tests__ --check",
     "fix": "eslint src __tests__ --fix && prettier src __tests__ --write",
     "clean": "rimraf lib esm dist",
-
+    "test": "echo \"Error: no test specified\" && exit 1",
     "lib": "run-p lib:*",
     "lib:cjs": "tsc -p tsconfig.json --target ES5 --module commonjs --outDir lib",
     "lib:esm": "tsc -p tsconfig.json --target ES5 --module ESNext --outDir esm",
