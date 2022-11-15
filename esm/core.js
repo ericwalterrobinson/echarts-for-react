@@ -158,11 +158,11 @@ var EChartsReactCore = /** @class */ (function (_super) {
      * render the echarts
      */
     EChartsReactCore.prototype.updateEChartsOption = function () {
-        var _a = this.props, option = _a.option, _b = _a.notMerge, notMerge = _b === void 0 ? false : _b, _c = _a.lazyUpdate, lazyUpdate = _c === void 0 ? false : _c, showLoading = _a.showLoading, _d = _a.loadingOption, loadingOption = _d === void 0 ? null : _d;
+        var _a = this.props, option = _a.option, _b = _a.notMerge, notMerge = _b === void 0 ? false : _b, _c = _a.lazyUpdate, lazyUpdate = _c === void 0 ? false : _c, showLoading = _a.showLoading, _d = _a.loadingOption, loadingOption = _d === void 0 ? null : _d, _e = _a.replaceMerge, replaceMerge = _e === void 0 ? [] : _e;
         // 1. get or initial the echarts object
         var echartInstance = this.getEchartsInstance();
         // 2. set the echarts option
-        echartInstance.setOption(option, notMerge, lazyUpdate);
+        echartInstance.setOption(option, { notMerge: notMerge, lazyUpdate: lazyUpdate, replaceMerge: replaceMerge });
         // 3. set loading mask
         if (showLoading)
             echartInstance.showLoading(loadingOption);
